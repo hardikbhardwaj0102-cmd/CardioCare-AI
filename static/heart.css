@@ -1,0 +1,1344 @@
+/* ==========================
+        RESET
+========================== */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background: rgb(255, 255, 255);
+
+    color: #333;
+
+    overflow-x: hidden;
+
+}
+
+
+
+
+
+/* ==========================
+        DASHBOARD LAYOUT
+========================== */
+
+
+.dashboard {
+
+    display: flex;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+}
+
+
+
+
+
+/* ==========================
+        SIDEBAR
+========================== */
+
+
+.sidebar {
+
+    width: 270px;
+
+    min-height: 100vh;
+    background: linear-gradient(180deg, #000000, #610202);
+
+    color: white;
+
+    padding: 25px 20px;
+    border-right: 2px solid rgb(113, 113, 113);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+}
+
+
+
+
+
+/* LOGO AREA */
+
+
+.logo {
+
+    text-align: center;
+
+}
+
+
+
+.logo img {
+
+    width: 75px;
+
+    height: 75px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.logo h2 {
+
+    font-size: 24px;
+
+    margin-bottom: 8px;
+
+}
+
+
+
+.logo p {
+
+    font-size: 14px;
+
+    opacity: 0.9;
+
+    line-height: 1.4;
+
+}
+
+
+
+
+
+
+
+/* ==========================
+        MENU
+========================== */
+
+
+.menu {
+
+    list-style: none;
+
+    margin-top: 40px;
+
+}
+
+
+
+.menu li {
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.menu li a {
+
+    display: block;
+
+    padding: 14px 18px;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+
+}
+
+
+
+.menu li a:hover {
+
+    background: rgba(255, 255, 255, 0.15);
+
+}
+
+
+
+.menu .active a {
+
+    background: white;
+
+    color: #b71c1c;
+
+    font-weight: 600;
+
+}
+
+
+
+
+
+
+
+/* ==========================
+        SIDEBAR FOOTER
+========================== */
+
+
+.sidebar-footer {
+
+    text-align: center;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+}
+
+
+
+.sidebar-footer p {
+
+    font-size: 14px;
+
+}
+
+
+
+.sidebar-footer small {
+
+    font-size: 12px;
+
+    opacity: 0.8;
+
+}
+
+/* ==========================
+        MAIN CONTENT
+========================== */
+
+
+.main-content {
+
+    flex: 1;
+
+    padding: 30px;
+
+    width: calc(100% - 370px);
+
+}
+
+
+
+
+
+
+/* ==========================
+        HEADER
+========================== */
+
+
+.header {
+
+    background: linear-gradient(180deg, #000000, #610202);
+
+    padding: 25px 30px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgb(154, 152, 152);
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.header h1 {
+
+    color: #ffffff;
+
+    font-size: 32px;
+
+    margin-bottom: 8px;
+
+}
+
+
+
+.header p {
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+}
+
+
+
+
+
+
+
+
+/* ==========================
+        TOP CARDS
+========================== */
+
+
+.top-cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+
+.top-card {
+
+    background: black;
+
+    padding: 22px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgb(154, 152, 152);
+
+}
+
+
+
+.top-card h3 {
+
+    color: white;
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.top-card span {
+
+    color: rgb(191, 189, 189);
+
+    font-size: 15px;
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+        CONTENT WRAPPER
+        (PATIENT + RIGHT PANEL FIX)
+========================== */
+
+
+.content-wrapper {
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+    width: 100%;
+
+}
+
+
+
+
+
+
+/* LEFT PANEL */
+
+
+.left-panel {
+
+    flex: 1;
+
+    width: 50%;
+
+}
+
+
+
+
+
+
+/* PATIENT CARD */
+
+
+.card {
+
+    background: black;
+
+    width: 100%;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgb(154, 152, 152);
+
+}
+
+
+
+.card h2 {
+
+    color: #ffffff;
+
+    font-size: 24px;
+
+    margin-bottom: 8px;
+
+}
+
+
+
+.subtitle {
+
+    color: #ffffff;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+
+
+
+
+/* FORM GRID */
+
+
+.grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+
+}
+
+
+
+.input-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+
+.input-group label {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 6px;
+
+    color: #ffffff;
+
+}
+
+
+
+input,
+select {
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    background: #ffffff;
+
+}
+
+
+
+input:focus,
+select:focus {
+
+    border-color: #b71c1c;
+
+    background: white;
+
+}
+
+/* ==========================
+        PREDICT BUTTON
+========================== */
+
+
+button {
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(180deg, #781c1c, #ba0000);
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+
+button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 25px rgb(154, 152, 152);
+    background: linear-gradient(180deg, #ff0000, #ff0707);
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+        RIGHT PANEL
+========================== */
+
+
+.right-panel {
+
+    flex: 1;
+
+    width: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+}
+
+
+
+
+
+
+/* ==========================
+        PREDICTION CARD
+========================== */
+
+
+.prediction-card {
+
+    width: 100%;
+
+    background: black;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgb(154, 152, 152);
+
+    overflow: hidden;
+    color: #ffffff;
+
+}
+
+
+
+
+
+.prediction-header {
+
+    background: rgb(77, 2, 2);
+
+    color: white;
+
+    padding: 25px;
+
+}
+
+
+
+.prediction-header h2 {
+
+    font-size: 24px;
+
+    margin-bottom: 8px;
+
+}
+
+
+
+.prediction-header p {
+
+    font-size: 14px;
+
+    opacity: 0.9;
+    color: #ffffff;
+
+}
+
+
+
+
+
+
+.prediction-content {
+
+    padding: 35px 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+
+
+
+.heart-circle {
+
+    width: 100px;
+
+    height: 100px;
+
+    border-radius: 50%;
+
+    background: #ffebee;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 45px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+
+
+#result h3 {
+
+    color: #fffdfd;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+#result p {
+
+    color: #ffffff;
+
+    line-height: 1.6;
+
+}
+
+
+
+
+
+#downloadBtn {
+
+    width: calc(100% - 50px);
+
+    margin: 0 25px 25px;
+
+    background: #ffffff;
+    color: black;
+}
+
+
+
+#downloadBtn:hover {
+
+    box-shadow: 0 8px 25px rgb(154, 152, 152);
+
+
+}
+
+
+
+
+
+
+/* ==========================
+        INFO CARDS
+========================== */
+
+
+.info-card {
+
+    background: black;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgb(154, 152, 152);
+
+
+}
+
+
+#model {
+    position: relative;
+    top: 380px;
+    right: 850px;
+    color: #ffffff;
+}
+
+#recommendations {
+    position: relative;
+    left: 28px;
+    top: -290px;
+}
+
+#menu {
+    position: relative;
+}
+
+#medical {
+    position: relative;
+    top: -290px;
+}
+
+#sidebarFooter {
+    position: relative;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 370px;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.main-content {
+    margin-left: 370px;
+    width: calc(100% - 370px);
+}
+
+.info-card h3 {
+
+    color: white;
+
+    margin-bottom: 20px;
+
+    font-size: 20px;
+
+}
+
+
+/* ==========================
+        RISK CATEGORY BOXES
+========================== */
+
+
+.risk-box {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    margin-bottom: 15px;
+}
+
+
+
+.risk-box span {
+
+    font-size: 25px;
+
+}
+
+
+
+.risk-box strong {
+
+    display: block;
+
+    font-size: 16px;
+
+}
+
+
+
+.risk-box small {
+
+    color: #ffffff;
+
+}
+
+
+
+.risk-box.low {
+    color: white;
+    background: #024207;
+
+}
+
+
+
+.risk-box.medium {
+    color: white;
+    background: #624b02;
+
+}
+
+
+
+.risk-box.high {
+    color: white;
+    background: #a02134;
+
+}
+
+.risk-box.exhigh {
+    color: white;
+    background: #f6012a;
+}
+
+
+
+
+
+
+
+
+/* ==========================
+        MODEL TABLE
+========================== */
+
+
+.model-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+.model-table tr {
+
+    border-bottom: 1px solid #eee;
+
+}
+
+
+
+.model-table td {
+
+    padding: 12px 8px;
+
+    font-size: 14px;
+
+}
+
+
+
+.model-table td:first-child {
+
+    font-weight: 600;
+
+    color: #ffffff;
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+        BOTTOM PANELS
+========================== */
+
+
+.bottom-panels {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    margin-top: 30px;
+
+    padding: 0 30px 30px;
+
+}
+
+
+
+.bottom-card {
+
+    background: black;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgb(154, 152, 152);
+}
+
+.bottom-card {
+    position: relative;
+    top: -260px;
+    right: 27px;
+}
+
+
+.bottom-card h2 {
+
+    color: white;
+
+    margin-bottom: 20px;
+
+    font-size: 22px;
+
+}
+
+
+
+.bottom-card ul {
+
+    padding-left: 20px;
+
+}
+
+
+
+.bottom-card li {
+
+    margin-bottom: 12px;
+
+    color: white;
+
+    line-height: 1.5;
+
+}
+
+
+
+
+
+
+
+
+/* ==========================
+        LOADING SCREEN
+========================== */
+
+
+.loading-screen {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+
+}
+
+
+
+.heart-loader {
+
+    font-size: 70px;
+
+    animation: heartbeat 1s infinite;
+
+}
+
+
+
+.loading-screen h2 {
+
+    margin-top: 20px;
+
+    color: #b71c1c;
+
+}
+
+
+
+#loadingText {
+
+    margin: 15px;
+
+    color: #555;
+
+}
+
+
+
+.loading-bar {
+
+    width: 300px;
+
+    height: 12px;
+
+    background: #eee;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+
+#loadingFill {
+
+    width: 0%;
+
+    height: 100%;
+
+    background: #d32f2f;
+
+    transition: 0.3s;
+
+}
+
+
+
+
+
+
+
+
+@keyframes heartbeat {
+
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+
+    50% {
+
+        transform: scale(1.15);
+
+    }
+
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+
+}
+
+/* ==========================
+        FINAL ALIGNMENT FIXES
+========================== */
+
+
+/* Keep patient and prediction same height alignment */
+
+.content-wrapper>.left-panel,
+.content-wrapper>.right-panel {
+
+    min-width: 0;
+
+}
+
+
+
+
+/* Remove unwanted extra spacing */
+
+.main-content section {
+
+    width: 100%;
+
+}
+
+
+
+
+
+
+/* ==========================
+        RESPONSIVE DESIGN
+========================== */
+
+
+
+@media(max-width:1200px) {
+
+
+    .content-wrapper {
+
+        flex-direction: column;
+
+    }
+
+
+
+    .left-panel,
+    .right-panel {
+
+        width: 100%;
+
+    }
+
+
+
+    .top-cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .bottom-panels {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+}
+
+
+
+
+
+
+@media(max-width:900px) {
+
+
+    .dashboard {
+
+        flex-direction: column;
+
+    }
+
+
+
+    .sidebar {
+
+        width: 100%;
+
+        min-height: auto;
+
+    }
+
+
+
+    .main-content {
+
+        width: 100%;
+
+        padding: 20px;
+
+    }
+
+
+
+    .grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .bottom-panels {
+
+        padding: 20px;
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:600px) {
+
+
+
+    .header h1 {
+
+        font-size: 24px;
+
+    }
+
+
+
+
+    .card,
+    .prediction-card,
+    .info-card,
+    .bottom-card {
+
+        border-radius: 15px;
+
+    }
+
+
+
+
+    .prediction-content {
+
+        padding: 25px 15px;
+
+    }
+
+
+
+
+    .heart-circle {
+
+        width: 80px;
+
+        height: 80px;
+
+        font-size: 35px;
+
+    }
+
+
+
+}
+
+
+
+
+/* ==========================
+        REMOVE UNWANTED SCROLL
+========================== */
+
+
+
+body {
+
+    overflow-x: hidden;
+
+}
+
+
+
+.dashboard {
+
+    overflow-x: hidden;
+
+}
