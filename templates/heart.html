@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CardioCare AI Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='heart.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <div class="dashboard">
+
+
+        <!-- ===========================
+        SIDEBAR
+=========================== -->
+
+
+        <aside class="sidebar" id="sidebar">
+
+
+            <div class="logo">
+
+
+                <img src="{{ url_for('static', filename='heart.png') }}" alt="Heart">
+
+
+                <h2>
+                    CardioCare AI
+                </h2>
+
+
+                <p>
+                    Heart Disease Risk Assessment
+                </p>
+
+
+            </div>
+
+
+
+
+            <ul class="menu" id="menu">
+
+
+                <li class="active">
+
+                    <a href="#dashboard">
+                        Dashboard
+                    </a>
+
+                </li>
+
+
+
+                <li>
+
+                    <a href="#patient">
+                        Patient
+                    </a>
+
+                </li>
+
+
+
+                <li>
+
+                    <a href="#prediction">
+                        Prediction
+                    </a>
+
+                </li>
+
+
+
+                <li>
+
+                    <a href="#medical">
+                        Medical Terms
+                    </a>
+
+                </li>
+
+
+
+                <li>
+
+                    <a href="#model">
+                        Model Information
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+
+
+
+
+            <div class="sidebar-footer" id="sidebarFooter">
+
+
+                <p>
+                    Version 1.0
+                </p>
+
+
+                <small>
+                    Artificial Neural Network
+                </small>
+
+
+            </div>
+
+
+        </aside>
+
+
+
+
+
+
+        <!-- ===========================
+        MAIN CONTENT
+=========================== -->
+
+
+        <main class="main-content">
+
+
+
+
+
+            <section id="dashboard">
+
+
+
+                <div class="header">
+
+
+
+                    <div>
+
+
+                        <h1>
+                            CardioCare AI Dashboard
+                        </h1>
+
+
+
+                        <p>
+                            Machine Learning Based Heart Disease Risk Assessment System
+                        </p>
+
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+                <div class="top-cards">
+
+
+
+                    <div class="top-card">
+
+
+                        <h3>
+                            Machine Learning Model
+                        </h3>
+
+
+                        <span>
+                            Artificial Neural Network
+                        </span>
+
+
+                    </div>
+
+
+
+
+
+                    <div class="top-card">
+
+
+                        <h3>
+                            Accuracy
+                        </h3>
+
+
+                        <span>
+                            90.12%
+                        </span>
+
+
+                    </div>
+
+
+
+
+
+                    <div class="top-card">
+
+
+                        <h3>
+                            Dataset Used
+                        </h3>
+
+
+                        <span>
+                            UCI Heart Disease
+                        </span>
+
+
+                    </div>
+
+
+
+
+                </div>
+
+
+
+            </section>
+
+
+
+
+
+
+
+            <!-- MAIN CONTENT AREA -->
+
+
+            <section class="content-wrapper">
+
+
+
+                <!-- LEFT PANEL -->
+
+
+                <div class="left-panel">
+
+
+
+                    <div class="card" id="patient">
+
+
+
+                        <h2>
+                            Patient Information
+                        </h2>
+
+
+
+                        <p class="subtitle">
+                            Enter patient information below.
+                        </p>
+
+
+
+
+                        <form id="heartForm">
+
+
+                            <div class="grid">
+                                <!-- ===========================
+        PATIENT FORM
+=========================== -->
+
+
+                                <input type="text" id="patientName" name="patientName" placeholder="Enter Patient Name"
+                                    required>
+
+
+                                <input type="tel" id="phone" name="phone" required placeholder="Enter Mobile Number">
+
+
+
+
+                                <div class="input-group">
+
+                                    <label>
+                                        Age
+                                    </label>
+
+                                    <input type="number" name="age" required>
+
+                                </div>
+
+
+
+
+
+
+                                <div class="input-group">
+
+                                    <label>
+                                        Gender
+                                    </label>
+
+
+                                    <select name="sex">
+
+
+                                        <option value="1">
+                                            Male
+                                        </option>
+
+
+                                        <option value="0">
+                                            Female
+                                        </option>
+
+
+                                    </select>
+
+
+                                </div>
+
+
+
+
+
+
+
+
+                                <div class="input-group">
+
+
+                                    <label>
+                                        Chest Pain Type
+                                    </label>
+
+
+
+                                    <select name="cp">
+
+
+                                        <option value="0">
+                                            Typical Angina
+                                        </option>
+
+
+                                        <option value="1">
+                                            Atypical Angina
+                                        </option>
+
+
+                                        <option value="2">
+                                            Non-Anginal Pain
+                                        </option>
+
+
+                                        <option value="3">
+                                            Asymptomatic
+                                        </option>
+
+
+
+                                    </select>
+
+
+
+                                </div>
+
+
+
+
+
+
+
+
+
+                                <div class="input-group">
+
+
+                                    <label>
+                                        Rest ECG
+                                    </label>
+
+
+
+                                    <select name="restecg">
+
+
+                                        <option value="0">
+                                            Normal
+                                        </option>
+
+
+
+                                        <option value="1">
+                                            ST-T Wave Abnormality
+                                        </option>
+
+
+
+                                        <option value="2">
+                                            Left Ventricular Hypertrophy
+                                        </option>
+
+
+
+                                    </select>
+
+
+
+                                </div>
+
+
+
+
+
+
+
+
+                                <div class="input-group">
+
+
+                                    <label>
+                                        Maximum Heart Rate Achieved
+                                    </label>
+
+
+                                    <input type="number" name="thalach" required>
+
+
+                                </div>
+
+
+
+
+
+
+
+
+
+                                <div class="input-group">
+
+
+                                    <label>
+                                        Exercise Induced Angina
+                                    </label>
+
+
+
+                                    <select name="exang">
+
+
+                                        <option value="0">
+                                            No
+                                        </option>
+
+
+                                        <option value="1">
+                                            Yes
+                                        </option>
+
+
+
+                                    </select>
+
+
+
+                                </div>
+
+
+
+
+
+
+
+
+                                <div class="input-group">
+
+
+                                    <label>
+                                        Old Peak
+                                    </label>
+
+
+                                    <input type="number" step="0.1" name="oldpeak" required>
+
+
+                                </div>
+
+
+
+
+
+
+
+
+
+                                <div class="input-group">
+
+
+                                    <label>
+                                        Slope
+                                    </label>
+
+
+
+                                    <select name="slope">
+
+
+                                        <option value="0">
+                                            Upsloping
+                                        </option>
+
+
+                                        <option value="1">
+                                            Flat
+                                        </option>
+
+
+                                        <option value="2">
+                                            Downsloping
+                                        </option>
+
+
+
+                                    </select>
+
+
+
+                                </div>
+
+
+
+
+
+
+
+
+
+                                <div class="input-group">
+
+
+                                    <label>
+                                        Major Vessels (CA)
+                                    </label>
+
+
+
+                                    <select name="ca">
+
+
+                                        <option value="0">
+                                            0
+                                        </option>
+
+
+                                        <option value="1">
+                                            1
+                                        </option>
+
+
+                                        <option value="2">
+                                            2
+                                        </option>
+
+
+                                        <option value="3">
+                                            3
+                                        </option>
+
+
+                                        <option value="4">
+                                            4
+                                        </option>
+
+
+
+                                    </select>
+
+
+
+                                </div>
+
+
+
+
+
+
+
+
+
+                                <div class="input-group">
+
+
+                                    <label>
+                                        Thal
+                                    </label>
+
+
+
+                                    <select name="thal">
+
+
+                                        <option value="0">
+                                            Unknown
+                                        </option>
+
+
+                                        <option value="1">
+                                            Normal
+                                        </option>
+
+
+                                        <option value="2">
+                                            Fixed Defect
+                                        </option>
+
+
+                                        <option value="3">
+                                            Reversible Defect
+                                        </option>
+
+
+
+                                    </select>
+
+
+
+                                </div>
+
+
+
+
+
+
+
+
+
+                                <div class="input-group">
+
+
+                                    <label>
+                                        Resting Blood Pressure
+                                    </label>
+
+
+                                    <input type="number" name="trestbps" required>
+
+
+                                </div>
+
+
+
+
+
+                            </div>
+
+
+
+
+
+                            <button type="button" onclick="predictHeart()">
+
+                                Predict Risk
+
+                            </button>
+
+
+
+
+                        </form>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+                <!-- ===========================
+         RIGHT PANEL
+======= ==================== -->
+
+
+                <div class="right-panel">
+
+
+
+
+
+                    <!-- Prediction Card -->
+
+
+                    <div class="prediction-card" id="prediction">
+
+
+
+                        <div class="prediction-header">
+
+
+                            <h2>
+                                Prediction Result
+                            </h2>
+
+
+                            <p>
+                                Artificial Neural Network Analysis
+                            </p>
+
+
+                        </div>
+
+
+
+
+
+
+                        <div class="prediction-content">
+
+
+
+                            <div class="heart-circle">
+
+                                ❤️
+
+                            </div>
+
+
+
+
+
+                            <div id="result">
+
+
+                                <h3>
+
+                                    Waiting for Prediction
+
+                                </h3>
+
+
+
+                                <p>
+
+                                    Complete the patient details and click
+                                    <strong>Predict Risk</strong> to generate
+                                    the heart disease assessment.
+
+                                </p>
+
+
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+
+
+
+                        <button id="downloadBtn" onclick="downloadReport()" style="display:none;">
+
+
+                            Download PDF Report
+
+
+                        </button>
+
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <!-- Risk Levels -->
+
+
+                    <div class="info-card">
+
+
+
+                        <h3>
+
+                            Risk Categories
+
+                        </h3>
+
+
+
+
+
+
+                        <div class="risk-box low">
+
+
+                            <span>
+                                🟢
+                            </span>
+
+
+
+                            <div>
+
+
+                                <strong>
+                                    Low Risk
+                                </strong>
+
+
+                                <small>
+                                    0% - 15%
+                                </small>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+
+                        <div class="risk-box medium">
+
+
+                            <span>
+                                🟡
+                            </span>
+
+
+
+                            <div>
+
+
+                                <strong>
+                                    Moderate Risk
+                                </strong>
+
+
+                                <small>
+                                    16% - 50%
+                                </small>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+
+
+                        <div class="risk-box high">
+
+
+                            <span>
+                                🔴
+                            </span>
+
+
+
+                            <div>
+
+
+                                <strong>
+                                    High Risk
+                                </strong>
+
+
+                                <small>
+                                    51% - 90%
+                                </small>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="risk-box exhigh">
+
+
+                            <span>
+                                ⚠️
+                            </span>
+
+
+
+                            <div>
+
+
+                                <strong>
+                                    Extremely High Risk
+                                </strong>
+
+
+                                <small>
+                                    91% - 100%
+                                </small>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <!-- Model Card -->
+
+
+                    <div class="info-card" id="model">
+
+
+
+                        <h3>
+
+                            🤖 Model Information
+
+                        </h3>
+
+
+
+
+
+
+                        <table class="model-table">
+
+
+
+                            <tr>
+
+
+                                <td>
+                                    Model
+                                </td>
+
+
+                                <td>
+                                    ANN
+                                </td>
+
+
+                            </tr>
+
+
+
+
+
+                            <tr>
+
+
+                                <td>
+                                    Accuracy
+                                </td>
+
+
+                                <td>
+                                    83.61%
+                                </td>
+
+
+                            </tr>
+
+
+
+
+
+
+                            <tr>
+
+
+                                <td>
+                                    Framework
+                                </td>
+
+
+                                <td>
+                                    TensorFlow
+                                </td>
+
+
+                            </tr>
+
+
+
+
+
+
+                            <tr>
+
+
+                                <td>
+                                    Dataset
+                                </td>
+
+
+                                <td>
+                                    UCI Heart Disease
+                                </td>
+
+
+                            </tr>
+
+
+
+                        </table>
+
+
+
+
+                    </div>
+
+
+
+
+
+                </div>
+
+            </section>
+            <!-- ==========================
+        INFORMATION PANELS
+=========================== -->
+
+
+            <section class="bottom-panels">
+
+
+
+
+
+                <div class="bottom-card" id="medical">
+
+
+
+                    <h2>
+
+                        📚 Medical Terms
+
+                    </h2>
+
+
+
+
+
+                    <ul>
+
+
+
+                        <li>
+
+                            <strong>Chest Pain :</strong>
+                            Type of chest discomfort experienced by the patient.
+
+                        </li>
+
+
+
+
+                        <li>
+
+                            <strong>Rest ECG :</strong>
+                            Resting electrocardiogram result.
+
+                        </li>
+
+
+
+
+                        <li>
+
+                            <strong>Old Peak :</strong>
+                            ST depression caused by exercise.
+
+                        </li>
+
+
+
+
+                        <li>
+
+                            <strong>CA :</strong>
+                            Number of major coronary vessels.
+
+                        </li>
+
+
+
+
+                        <li>
+
+                            <strong>Thal :</strong>
+                            Thalassemia test result.
+
+                        </li>
+
+
+
+
+                    </ul>
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="bottom-card" id="recommendations">
+
+
+
+                    <h2>
+
+                        💡 Recommendations
+
+                    </h2>
+
+
+
+
+
+                    <ul>
+
+
+
+                        <li>
+                            ✔ Maintain a healthy lifestyle.
+                        </li>
+
+
+
+                        <li>
+                            ✔ Exercise regularly.
+                        </li>
+
+
+
+                        <li>
+                            ✔ Eat a balanced diet.
+                        </li>
+
+
+
+                        <li>
+                            ✔ Monitor blood pressure.
+                        </li>
+
+
+
+                        <li>
+                            ✔ Avoid smoking.
+                        </li>
+
+
+
+                        <li>
+                            ✔ Consult a healthcare professional if symptoms occur.
+                        </li>
+
+
+
+                    </ul>
+
+
+
+
+                </div>
+
+
+
+
+
+            </section>
+
+
+
+
+
+
+
+
+
+            <!-- Loading Screen -->
+
+
+            <div id="loadingScreen" class="loading-screen" style="display:none;">
+
+
+
+                <div class="heart-loader">
+
+                    ❤️
+
+                </div>
+
+
+
+
+
+                <h2>
+
+                    Analyzing Patient Data...
+
+                </h2>
+
+
+
+
+
+                <div id="loadingText">
+
+                    Initializing AI Model...
+
+                </div>
+
+
+
+
+
+                <div class="loading-bar">
+
+
+                    <div id="loadingFill"></div>
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </main>
+
+
+    </div>
+
+
+
+
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+
+
+</body>
+
+
+</html>
